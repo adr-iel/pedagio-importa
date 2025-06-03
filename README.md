@@ -2,18 +2,18 @@
 
 Este script realiza a importação de dados de transações de pedágio (neste caso foi utilizado a plataforma Veloe) a partir de um arquivo CSV para uma base de dados MySQL utilizando a biblioteca SQLAlchemy e Pandas.
 
-##Estrutura do Projeto
+Estrutura do Projeto
 - `extrato_veloe.csv`: Arquivo CSV contendo os dados de transações de pedágio.
 - `log_erros.txt`: Arquivo de log que registra qualquer erro encontrado durante a execução.
 - `index.py`: Script Python principal que executa a importação.
 
-##Requisitos
+Requisitos  
 Certifique-se de ter as seguintes bibliotecas instaladas:
 ```bash
 pip install pandas sqlalchemy pymysql
 ```
 
-##Configurações
+Configurações  
 As variáveis principais que você pode ajustar:
 ```python
 caminho_csv = 'C:/.../extrato_veloe.csv'
@@ -21,7 +21,7 @@ caminho_log_txt = 'C:/.../log_erros.txt'
 caminho_banco = 'mysql+pymysql://usuario:senha@host:porta/nome_banco'
 ```
 
-#Funcionamento
+Funcionamento  
 1. **Leitura do CSV:** Lê o arquivo usando `pandas.read_csv`, com separador `;`.
 2. **Processamento dos Dados:**
    - Converte a data para o formato ISO (`YYYY-MM-DD`).
@@ -43,5 +43,5 @@ Ao final da execução, será exibida a mensagem:
 Execução finalizada com SQLAlchemy. Verifique o log em 'log_erros.txt' caso necessário.
 ```
 
-#Licença
+#Licença  
 Este projeto é de uso interno. Consulte a equipe responsável antes de redistribuir.
